@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elas na Tecnologia | IEMA</title>
+    
+    <!-- Fonte Google Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ficheiro de Estilos CSS -->
+    <link rel="stylesheet" href="tec.css">
+
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Cabeçalho / Menu -->
+    <header>
+        <h1>Elas na Tecnologia</h1>
+        <nav>
+            <a href="#historia">História</a>
+            <a href="#dados">Estatísticas</a>
+            <a href="#entrevistas">Entrevistas</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#ideias">Ideação</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <h2>Mulheres que Transformam a Ciência e a Tecnologia</h2>
+        <p>Conheça as pioneiras do passado, a realidade atual e ajude a construir as soluções tecnológicas do futuro no IEMA.</p>
+    </section>
+
+    <!-- Linha do Tempo -->
+    <section id="historia" class="container">
+        <h2 class="section-title">Pioneiras da Tecnologia</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-date">1843</span>
+                <h3>Ada Lovelace</h3>
+                <p>Matemática inglesa reconhecida como a <strong>primeira programadora da história</strong> ao escrever o primeiro algoritmo para a Máquina Analítica.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">Anos 1950</span>
+                <h3>Grace Hopper</h3>
+                <p>Criou o primeiro compilador e popularizou a linguagem COBOL. Criou o termo "bug" para falhas no sistema.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">Anos 1960</span>
+                <h3>Katherine Johnson</h3>
+                <p>Matemática da NASA cujos cálculos de trajetória foram fundamentais para os primeiros voos espaciais tripulados.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">Anos 1960 - 1970</span>
+                <h3>Margaret Hamilton</h3>
+                <p>Liderou o desenvolvimento do software de navegação das missões Apollo que levaram a humanidade à Lua.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estatísticas -->
+    <section id="dados" class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Participação Feminina Atual</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">20%</div>
+                    <p>Dos profissionais no setor de tecnologia no Brasil são mulheres.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30%</div>
+                    <p>Dos alunos em cursos de TI/Engenharia são do sexo feminino.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">79%</div>
+                    <p>Das alunas de TI enfrentam desafios de permanência no curso, reforçando a importância do apoio acadêmico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entrevistas -->
+    <section id="entrevistas" class="container">
+        <h2 class="section-title">Mulheres no Nosso IEMA</h2>
+        <div class="interviews-grid">
+            <div class="interview-card">
+                <h4>Joana Maria</h4>
+                <p class="role">Estudante do 3º Ano de Informática</p>
+                <p><em>"A tecnologia força quando combina perspectivas diversas. Nos mulheres temos potencial para liderar grandes projetos."</em></p>
+            </div>
+            <div class="interview-card">
+                <h4>Alícia Pinho</h4>
+                <p class="role">Estudante do 3º Ano de Informática</p>
+                <p><em>"Descobrir a história de Margaret Hamilton me fez perceber que criar softwares também é lugar para mim."</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Interativo -->
+    <section id="quiz" class="container">
+        <h2 class="section-title">Quiz: Teste Seus Conhecimentos</h2>
+        <div class="quiz-container">
+            <h3>Quem escreveu o primeiro algoritmo da história?</h3>
+            <div class="options">
+                <button class="quiz-option" onclick="checkAnswer(true)">Ada Lovelace</button>
+                <button class="quiz-option" onclick="checkAnswer(false)">Grace Hopper</button>
+                <button class="quiz-option" onclick="checkAnswer(false)">Katherine Johnson</button>
+            </div>
+            <p id="quiz-result"></p>
+        </div>
+    </section>
+
+    <!-- Espaço de Ideação -->
+    <section id="ideias" class="container">
+        <h2 class="section-title">Proponha uma Solução Tecnológica</h2>
+        <p class="subtitle">Como a tecnologia pode resolver um problema na sua escola ou comunidade?</p>
+        
+        <div class="idea-form">
+            <div class="form-group">
+                <label for="authorName">Seu Nome / Turma:</label>
+                <input type="text" id="authorName" placeholder="Ex: Maria - Turma 203">
+            </div>
+            <div class="form-group">
+                <label for="ideaText">Sua Ideia Tecnológica:</label>
+                <textarea id="ideaText" rows="4" placeholder="Descreva sua ideia de aplicativo ou site..."></textarea>
+            </div>
+            <button class="btn-submit" onclick="addIdea()">Enviar Ideia</button>
+
+            <div class="ideas-list" id="ideasList">
+                <h3>Ideias Registradas:</h3>
+                <div class="idea-item">
+                    <strong>Alunos do IEMA:</strong> Aplicativo para conectar doadores de livros didáticos na comunidade.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Projeto <strong>Elas na Tecnologia</strong> — Feira de Ciências do IEMA</p>
+        <p><small>ODS 4, 5, 8, 9 e 10 | "Ciência Delas: Mulheres que Transformam o Mundo"</small></p>
+        <p>303 © 2026 - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Ficheiro de Scripts JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
